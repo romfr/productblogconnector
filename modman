@@ -1,0 +1,4 @@
+app/etc/modules/Rom_ProductBlogConnector.xml app/etc/modules/Rom_ProductBlogConnector.xml
+app/code/local/Rom/ProductBlogConnector app/code/local/Rom/ProductBlogConnector
+app/design/frontend/base/default/layout/productblogconnector.xml app/design/frontend/base/default/layout/productblogconnector.xml
+app/design/frontend/base/default/template/productblogconnector app/design/frontend/base/default/template/productblogconnector

@@ -1,0 +1,27 @@
+<!--
+/**
+ * @category    Rom
+ * @package     Rom_ProductBlogConnector
+ * @copyright   Copyright (c) 2014 ROM - Agence de communication (http://www.rom.fr/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      André Herrn <info@andre-herrn.de>
+ */
+-->
+<?php
+$blogPosts = $this->getBlogPosts();
+?>
+
+<?php if (count($blogPosts) > 0): ?>
+    <div class="block block-related-blog-posts">
+        <div class="block-title">
+            <strong><span><?php echo $this->__('Blog posts') ?></span></strong>
+        </div>
+        <div class="block-content">
+            <ul class="list_of_blog_posts">
+                <?php foreach ($blogPosts as $blogPost): ?>
+                    <li><a href="<?php echo Mage::helper('productblogconnector/data')->getBlogPostUrl($blogPost); ?>"><?php echo $blogPost->getTitle(); ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+<?php endif; ?>

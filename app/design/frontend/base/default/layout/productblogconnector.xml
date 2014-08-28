@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Rom
+ * @package     Rom_ProductBlogConnector
+ * @copyright   Copyright (c) 2014 ROM - Agence de communication (http://www.rom.fr/)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      André Herrn <info@andre-herrn.de>
+ */
+-->
+<layout version="0.1.0">
+    <catalog_product_view>
+        <reference name="right">
+            <block type="productblogconnector/catalog_product_view" name="productblogconnector.catalog.product.view">
+                <action method="setTemplate" ifconfig="blog/productblogconnector/enabled">
+                    <template>productblogconnector/catalog/product/view/productblogconnector.phtml</template>
+                </action>
+            </block>
+        </reference>
+
+        <reference name="left">
+            <block type="productblogconnector/catalog_product_view" name="productblogconnector.catalog.product.view">
+                <action method="setTemplate" ifconfig="blog/productblogconnector/enabled">
+                    <template>productblogconnector/catalog/product/view/productblogconnector.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </catalog_product_view>
+</layout>
