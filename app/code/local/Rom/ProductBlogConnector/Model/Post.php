@@ -36,7 +36,8 @@ class Rom_ProductBlogConnector_Model_Post extends Varien_Object
                     array('like' => '%id_path="product/'.$productId.'"%'),
                     array('like' => '%id_path="product/'.$productId.'/%'),
                 )
-            );
+            )
+            ->setOrder('created_time','DESC');;
         $blogPosts->getSelect()->limit((int) Mage::getStoreConfig('blog/productblogconnector/posts_limit'));
 
 
