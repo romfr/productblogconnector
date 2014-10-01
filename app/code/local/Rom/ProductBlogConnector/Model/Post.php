@@ -30,7 +30,15 @@ class Rom_ProductBlogConnector_Model_Post extends Varien_Object
          */
         $blogPosts = Mage::getModel('blog/post')
             ->getCollection()
-            ->addFieldToFilter('post_content', array('like' => '%id_path="product/'.$productId.'"%'));
+            ->addFieldToFilter(
+                'post_content',
+                array(
+                    array('like' => '%id_path="product/'.$productId.'"%'),
+                    array('like' => '%id_path="product/'.$productId.'/%'),
+                )
+            );
+        $blogPosts->getSelect()->limit((int) Mage::getStoreConfig('blog/productblogconnector/posts_limit'));
+
 
         return $blogPosts;
     }

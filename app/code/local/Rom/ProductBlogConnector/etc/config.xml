@@ -47,6 +47,7 @@
         <blog>
             <productblogconnector>
                 <enabled>1</enabled>
+                <posts_limit>5</posts_limit>
             </productblogconnector>
         </blog>
     </default>
